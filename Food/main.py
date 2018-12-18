@@ -8,7 +8,7 @@ def foodCategory(cat=""):
     offer = getData((base64.b64decode('aHR0cHM6Ly9hcGkubWF0dGlsYnVkLmNvbS92MS9vZmZlcnMvYXVzdGFnZGVyL2NhdGVnb3JpZXM=').decode('utf-8')))
     avaliableID = ["husholdning", "hygiene", "kjottdeig", "kyllingfilet", "fisk", "ost", "ferdigmat", "brus", "godis", "kaffe"]
 
-    if cat == "":
+    if cat not in avaliableID:
     	return ("please give me a valid id ", avaliableID)
 
     if cat in avaliableID:
